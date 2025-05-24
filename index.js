@@ -19,16 +19,10 @@ const generatorPassword = (len) => {
 const getPassword = () => {
     const newPassword =  generatorPassword(passwordLength.value);
     password.value = newPassword;
-    setTimeout(() => {
-        alert("Password has been generated");
-    }, 1000)
 }
 
 const savePassword = () => {
     document.title = password.value;
     saveButton.setAttribute("href", 'data:text/plain;charset=utf-8,' + encodeURIComponent(`password saya: ${document.title}`));
     saveButton.setAttribute("download", "MyPasswordGeneratorLOG.txt");
-    setTimeout(() => {
-        alert("berhasil disimpan");
-    }, 1000)
 }
